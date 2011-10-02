@@ -1,0 +1,17 @@
+# Rails defaults
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
+.sass-cache/
+
+# Vim backups
+*.swp
+*.swo
+
+# Emacs backups
+*~
+.#*
+
+# Sensitive config stuff.
+config/database.yml
