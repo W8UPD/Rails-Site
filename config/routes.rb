@@ -1,4 +1,10 @@
 RailsSite::Application.routes.draw do
+  resources :users
+
+  match '/auth/:provider/callback' => 'sessions#create'
+  match '/auth/logout' => 'sessions#destroy'
+  match '/auth/status' => 'sessions#status'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,4 @@
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :facebook, 'REDACTED', 'REDACTED', {:client_options => {:ssl => {:ca_file => '/etc/pki/tls/certs/ca-bundle.crt'}}}
+  provider :github, 'REDACTED', 'REDACTED', {:client_options => {:ssl => {:ca_file => '/etc/pki/tls/certs/ca-bundle.crt'}}}
+end
