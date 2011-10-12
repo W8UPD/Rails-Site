@@ -1,14 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>RailsSite</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <title>The University of Akron Amateur Radio Club, W8UPD</title>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('#slider').s3Slider({
+      timeOut: 6000
+      });
+      });
+    </script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22277117-1']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="global">
+      <div id="namebar">
+        <div id="maxwidth">
+          <div id="headerleft">
+            <div class="clubcall">W8UPD</div>
+            <div class="clubname">University of Akron Amateur Radio Club</div>
+          </div>
+          <div id="headerright">
+            <% if current_user %>
+            <img class="profileimg" src="{{ user.get_profile.picture_url }}" alt="{{ user.get_full_name }}'s profile picture" />
+            <span style="color: #AAAAAA; float:left">Hello, <%= current_user.realname %>!</span><br />
+            <% else %>
+            <form action="/login/" method="post">
+              <table>
+                <tr>
+                  <td><label for="username">Callsign</label></td>
+                  <td><label for="password">Password</label></td>
+                </tr>
+                <tr>
+                  <input type="hidden" name="next" value="/profile/" />
+                  <td><input class="field" type="text" name="username" /></td>
+                  <td><input class="field" type="password" name="password" /></td>
+                  <td><input class="submit" type="submit" value="Login" /></td>
+                </tr>
+              </table>
+            </form>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div id="linkbar">
+        <div id="maxwidth">
+          <ul id="linkbarlist">
+            <li><a href="/">Home</a></li>
+            <li><a href="/club-info/">Club</a></li>
+            <li><a href="/repeater/">Repeater</a></li>
+            <li><a href="/calendar/">Calendar</a></li>
+		        <li><a href="/projects/">Projects</a></li>
+		        <li><a href="/net/">Nets</a></li>
+		        <li><a href="/links/">Links</a></li>
+		        <li><a href="/irc/">IRC Chat</a>
+		        <li><a href="/newsletters/">News Letters</a></li>
+		        <li><a href="http://group.w8upd.org/">Email List</a></li>
+            <li><a href="http://oldsite.w8upd.org/">Old Site</a></li>
+          </ul>
+          <% if current_user %>
+            <ul id="linkbarlistright">
+              <li><a href="/profile/">Profile</a></li>
+              <li><a href="/logout/">Log Out</a></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
+      <div id="content">
+        <%= yield %>
+        <div style="clear: both"></div>
+      </div>
+      <div id="footer">
+        <span class="alignleft">Powered by Ruby on Rails<br /></span>
+        <span class="alignright">&copy; 2011 W8UPD</span>
+      </div>
+    </div>
+  </body>
 </html>

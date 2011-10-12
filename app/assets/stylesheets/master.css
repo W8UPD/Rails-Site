@@ -1,0 +1,170 @@
+/* Global to everything, used throughout. */
+html, body {
+    margin: 0 auto;
+    font-family: Helvetica, sans-serif;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
+}
+#maxwidth {
+    width: 930px !important;
+    margin: 0 auto;
+}
+
+/* Header */
+#namebar {
+    /* The bar that has the big ol' "W8UPD" stuff. */
+    background-color: #222222;
+    height: 60px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+}
+
+/* Left side, club name/callsign */
+#namebar #headerleft {
+    float: left;
+}
+#namebar #headerleft .clubname {
+    font-size: 1.2em;
+    color: #AAAAAA;
+    text-align: left;
+}
+#namebar #headerleft .clubcall {
+    font-size: 2em;
+    font-weight: bold;
+    color: #0099CC;
+    text-align: left;
+}
+
+/* Right side, login/prof info */
+#namebar #headerright {
+    float: right;
+}
+#namebar #headerright input.field {
+    background-color: #FFFFFF;
+    border: 1px solid #AAAAAA:
+}
+#namebar #headerright input.submit {
+    border: 2px solid #BBBBBB;
+    background-color: #BBBBBB;
+}
+#namebar #headerright input.submit:hover {
+    border: 2px solid #0099CC;
+}
+#namebar #headerright input.submit:active {
+    background-color: #999999;
+}
+#namebar #headerright label {
+    /* Used in the login form, for unauth'd visitors */
+    color: #AAAAAA;
+    font-size: 0.8em;
+}
+img.profileimg {
+    /* Global because this is used in the directory listing, too. */
+    float: left;
+    height: 100%;
+    width: 80px; /* TODO */
+    padding-right: 10px;
+}
+#namebar #headerright a.headerlink {
+    font-size: 0.8em;
+    color: #AAAAAA;
+    font-style: italic;
+}
+
+/* Linkbar; which will eventually be dynamic */
+#linkbar {
+    /* The...bar with the links. ;) */
+    background-color: #444444;
+    height: 35px;
+}
+#linkbarlist {
+    padding: 0;
+    margin: 0;
+    float: left;
+    line-height: 35px;
+}
+#linkbarlistright {
+    padding: 0;
+    margin: 0;
+    float: right;
+    line-height: 35px;
+}
+#linkbarlist li, #linkbarlistright li {
+    float: left;
+    list-style-type: none;
+}
+#linkbarlist li a, #linkbarlistright li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 0.8em;
+}
+#linkbarlist li a:hover, #linkbarlistright li a:hover {
+    background-color: #555;
+}
+
+/* Site Body */
+#content {
+    margin: 10px auto;
+    width: 930px;
+    background-color: #F8F8F8;
+    border: 1px solid #CCCCCC;
+    text-align: left;
+/*
+    padding-left: 10px;
+    padding-right: 10px;
+*/
+}
+#content #page p {
+    margin-left: 30px;
+}
+#content #page {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#triportal {
+    margin: 15px auto;
+    padding: 5px;
+    text-align: left;
+}
+#triportal .title {
+    border-bottom: 1px solid #CCCCCC;
+    font-size: 13px;
+    font-weight: bold;
+    width: 290px;
+    text-align: left;
+}
+#triportal #leftportal {
+    float: left;
+    width: 290px;
+    margin-right: 21px;
+}
+#triportal #middleportal {
+    float: left;
+    width: 290px;
+    margin-right: 21px;
+}
+#triportal #rightportal {
+    float: left;
+    width: 290px;
+}
+
+/* Footer */
+#footer {
+    width: 930px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    font-size: 13px;
+    text-align: left;
+    color: #888888;
+}
