@@ -1,0 +1,5 @@
+For a successful install (and `bundle install`) you need the following.
+This guide is geared toward RHEL/CentOS/Fedora. Package names may vary.
+  - libxml2-devel
+  - libxslt-devel
+  - sqlite-devel (only needed for development instances which are not mysql-backed)
