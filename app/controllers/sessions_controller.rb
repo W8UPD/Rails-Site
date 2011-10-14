@@ -6,15 +6,15 @@ class SessionsController < ApplicationController
     end
     self.current_user = @auth.user
 
-    render :text => "Welcome! You have authenticated!"
+    redirect_to(request.env['omniauth.origin'] || '/') and return
   end
 
   def destroy
     session[:user_id] = nil
-    render :text => "Bye! You have logged out!"
+    redirect_to '/' and return
   end
 
-  def status
-    render :text => "Session: #{session[:user_id]}"
+  def me
+    render :text => "Session: #{session[:user_id]}" and return
   end
 end

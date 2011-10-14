@@ -5,84 +5,53 @@ html, body {
     background-color: #F2F2F2;
     text-align: center;
 }
-.alignleft {
-    float: left;
-}
-.alignright {
-    float: right;
-}
-#maxwidth {
-    width: 930px !important;
+.fl { float: left; }
+.fr { float: right; }
+.constrain {
+    width: 970px !important;
     margin: 0 auto;
 }
 
+.cf:before, .cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear:both;
+}
+.cf { zoom: 1; }
+
 /* Header */
-#namebar {
-    /* The bar that has the big ol' "W8UPD" stuff. */
-    background-color: #222222;
-    height: 60px;
-    padding: 10px;
+#header {
+    background-color: #024769;
     padding-left: 20px;
     padding-right: 20px;
-    text-align: left;
+    font-size: 1.3em;
+    padding-bottom: 2px;
 }
 
-/* Left side, club name/callsign */
-#namebar #headerleft {
-    float: left;
+#header .clubcall {
+    font-weight: bold;
+    color: #95CBE9;
 }
-#namebar #headerleft .clubname {
+#header .clubname {
     font-size: 1.2em;
     color: #AAAAAA;
-    text-align: left;
 }
-#namebar #headerleft .clubcall {
-    font-size: 2em;
-    font-weight: bold;
-    color: #0099CC;
-    text-align: left;
+#header #search input  {
+    width: 315px;
+    border: solid 1px #85b1de;
+    border-radius: 5px;
+}
+#header a {
+    text-decoration: none;
 }
 
-/* Right side, login/prof info */
-#namebar #headerright {
-    float: right;
-}
-#namebar #headerright input.field {
-    background-color: #FFFFFF;
-    border: 1px solid #AAAAAA:
-}
-#namebar #headerright input.submit {
-    border: 2px solid #BBBBBB;
-    background-color: #BBBBBB;
-}
-#namebar #headerright input.submit:hover {
-    border: 2px solid #0099CC;
-}
-#namebar #headerright input.submit:active {
-    background-color: #999999;
-}
-#namebar #headerright label {
-    /* Used in the login form, for unauth'd visitors */
-    color: #AAAAAA;
-    font-size: 0.8em;
-}
-img.profileimg {
-    /* Global because this is used in the directory listing, too. */
-    float: left;
-    height: 100%;
-    width: 80px; /* TODO */
-    padding-right: 10px;
-}
-#namebar #headerright a.headerlink {
-    font-size: 0.8em;
-    color: #AAAAAA;
-    font-style: italic;
-}
 
 /* Linkbar; which will eventually be dynamic */
 #linkbar {
     /* The...bar with the links. ;) */
-    background-color: #444444;
+    background-color: #AFD775;
     height: 35px;
 }
 #linkbarlist {
@@ -104,19 +73,26 @@ img.profileimg {
 #linkbarlist li a, #linkbarlistright li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #444444;
     padding-left: 7px;
     padding-right: 7px;
     font-size: 0.8em;
 }
 #linkbarlist li a:hover, #linkbarlistright li a:hover {
-    background-color: #555;
+    background-color: #BFE785;
+}
+
+#loginbar {
+    background-color: #2C5700;
+    height: 35px;
+    line-height: 35px;
+    text-align: left;
 }
 
 /* Site Body */
 #content {
     margin: 10px auto;
-    width: 930px;
+    width: 970px;
     background-color: #F8F8F8;
     border: 1px solid #CCCCCC;
     text-align: left;
@@ -161,7 +137,7 @@ img.profileimg {
 
 /* Footer */
 #footer {
-    width: 930px;
+    width: 970px;
     margin: 0 auto;
     padding-bottom: 10px;
     font-size: 13px;
