@@ -29,7 +29,6 @@ html, body {
     font-size: 1.3em;
     padding-bottom: 2px;
 }
-
 #header .clubcall {
     font-weight: bold;
     color: #95CBE9;
@@ -51,8 +50,11 @@ html, body {
 /* Linkbar; which will eventually be dynamic */
 #linkbar {
     /* The...bar with the links. ;) */
-    background-color: #AFD775;
+    background-color: #8DB553;
     height: 35px;
+}
+.linkbar_bg {
+    background-color: #AFD775;
 }
 #linkbarlist {
     padding: 0;
@@ -85,16 +87,20 @@ html, body {
 #loginbar {
     background-color: #2C5700;
     height: 35px;
-    line-height: 35px;
+    color: #ffffff;
     text-align: left;
 }
 
 /* Site Body */
 #content {
-    margin: 10px auto;
-    width: 970px;
+    margin: 0 auto;
+    width: 950px;
+    padding: 10px;
     background-color: #F8F8F8;
     border: 1px solid #CCCCCC;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     text-align: left;
 /*
     padding-left: 10px;

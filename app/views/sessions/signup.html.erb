@@ -1,0 +1,21 @@
+<% action = current_user ? 'link account' : 'create account' %>
+
+<b>Action: <%= action %> </b>
+
+<% if !current_user %>
+This is different than adding an authentication mechanism to an already-registered account. If you already have an account on this website, using another authentication mechanism (e.g. Facebook), please log in using that system first, then go to profile &raquo; settings &raquo; authentication.
+<% end %>
+
+<hr />
+
+Email: <%= @auth_info[:email] %><br />
+Name: <%= @auth_info[:realname] %><br />
+UID: <%= @auth_info[:uid] %><br />
+Provider: <%= @auth_info[:provider] %><br />
+
+<hr />
+
+<%= form_tag :controller => 'sessions', :action => 'newaccount' do %>
+  <%= submit_tag "Confirm and create new account" %>
+  <%= submit_tag "Cancel" %>
+<% end %>

@@ -1,11 +1,17 @@
 RailsSite::Application.routes.draw do
   resources :pages
 
-  resources :users
+  resources :sessions do
+    collection do
+      post 'newaccount'
+      get 'signup'
+    end
+  end
 
   match '/auth/:provider/callback' => 'sessions#create'
   match '/auth/logout' => 'sessions#destroy'
   match '/auth/status' => 'sessions#me'
+  match '/auth/newaccount' => 'sessions#newaccount'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +62,7 @@ RailsSite::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :controller => 'pages', :action => 'show', :id => 2
+  root :controller => 'pages', :action => 'index'
 
   # See how all your routes lay out with "rake routes"
 

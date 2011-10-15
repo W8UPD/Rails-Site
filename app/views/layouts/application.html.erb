@@ -21,8 +21,8 @@
   </head>
   <body>
     <div id="global">
-      <div id="header" class="cf">
-        <div class="constrain">
+      <div id="header">
+        <div class="constrain cf">
           <%= link_to 'W8UPD', '/', :class => 'clubcall fl' %>
           <span class="fr">
             <form id="search">
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div id="linkbar">
-        <div class="constrain">
+        <div class="constrain linkbar_bg cf">
           <ul id="linkbarlist">
  
             <li><a href="/repeater/">Repeater</a></li>
@@ -47,6 +47,7 @@
           </ul>
           <% if current_user %>
             <ul id="linkbarlistright">
+              <li><%= link_to 'Profile', '/me' %></li>
               <li><%= link_to 'Log out', '/auth/logout' %></li>
             </ul>
           <% else %>
@@ -59,6 +60,7 @@
       
       <div id="loginbar" class="cf">
         <div class="constrain">
+          <span style="line-height: 35px; vertical-align: middle;">Log in using: </span>
           <%= link_to image_tag('authbuttons/png/facebook_32.png'), '/auth/facebook' %>
         </div>
       </div>

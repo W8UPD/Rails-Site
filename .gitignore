@@ -16,3 +16,6 @@ tmp/
 # Sensitive config stuff.
 config/database.yml
 config/initializers/omniauth.rb
+
+# Assets
+public/assets/*
