@@ -22,6 +22,10 @@ group :assets do
   gem 'uglifier'
 end
 
+group :production do
+  gem 'activerecord-mysql-adapter'
+end
+
 gem 'jquery-rails'
 gem 'therubyracer'
 
