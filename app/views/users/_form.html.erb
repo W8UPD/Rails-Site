@@ -12,8 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <p>
+      <%= f.label :realname, 'Name' %>
+      <%= f.text_field :realname %>
+    </p>
+    
+    <p>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </p>
+
+    <p>
+      <%= f.label :roles %>
+      <% Role.find(:all).each do |role| %>
+        <div>
+          <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+          <%= role.name %>
+        </div>
+      <% end %>
+    </p>
+    
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -14,3 +14,20 @@ pre {
   font-size: 0.9em;
 }
 
+#notice {
+    background-color: #D6D6FF;
+    padding: 5px;
+    border: 1px solid #7373CC;
+}
+
+#error {
+    background-color: #FFD6D6;
+    padding: 5px;
+    border: 1px solid #FF7373;
+}
+
+#success {
+    background-color: #D6FFD6;
+    padding: 5px;
+    border: 1px solid #73CC73;
+}

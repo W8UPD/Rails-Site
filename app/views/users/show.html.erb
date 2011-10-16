@@ -1,10 +1,17 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+  <b>name:</b>
+  <%= @user.realname %>
 </p>
 
+<p>
+  <b>email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>roles:</b>
+  <%= @user.roles.map {|role| role.name}.join ', ' %>
+</p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

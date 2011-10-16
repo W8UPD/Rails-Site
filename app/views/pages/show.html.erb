@@ -1,7 +1,6 @@
-<p id="notice"><%= notice %></p>
-
 <h1><%= @page.title %></h1>
 <p><%= markdown @page.content %></p>
 
-<%= link_to 'Edit', edit_page_path(@page) %> |
-<%= link_to 'Back', pages_path %>
+<% if can? :manage, @page %>
+  <%= link_to 'Edit', edit_page_path(@page) %>
+<% end %>

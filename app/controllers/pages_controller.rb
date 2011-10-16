@@ -1,4 +1,7 @@
 class PagesController < ApplicationController
+  load_resource :find_by => :slug
+  authorize_resource
+
   # GET /pages
   # GET /pages.json
   def index

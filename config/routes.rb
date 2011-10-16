@@ -1,5 +1,6 @@
 RailsSite::Application.routes.draw do
   resources :pages
+  resources :users
 
   resources :sessions do
     collection do

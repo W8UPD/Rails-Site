@@ -66,6 +66,10 @@
       </div>
       
       <div id="content" class="cf">
+        <% flash.each do |key, msg| %>
+          <%= content_tag :div, msg, :id => key, :class => 'cf' %>
+        <% end %>
+      
         <%= yield %>
       </div>
       <div id="footer">
