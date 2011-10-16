@@ -13,6 +13,8 @@ RailsSite::Application.routes.draw do
   match '/auth/status' => 'sessions#me'
   match '/auth/newaccount' => 'sessions#newaccount'
 
+  match '/:id' => 'pages#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
