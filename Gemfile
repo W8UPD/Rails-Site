@@ -23,7 +23,7 @@ group :assets do
 end
 
 group :production do
-  gem 'activerecord-mysql-adapter'
+  gem 'mysql'
 end
 
 gem 'jquery-rails'
