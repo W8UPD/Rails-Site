@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
-    @page = Page.find(params[:id])
+    @page = Page.find_by_slug(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -34,7 +34,7 @@ class PagesController < ApplicationController
 
   # GET /pages/1/edit
   def edit
-    @page = Page.find(params[:id])
+    @page = Page.find_by_slug(params[:id])
   end
 
   # POST /pages
@@ -57,7 +57,7 @@ class PagesController < ApplicationController
   # PUT /pages/1
   # PUT /pages/1.json
   def update
-    @page = Page.find(params[:id])
+    @page = Page.find_by_slug(params[:id])
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -73,7 +73,7 @@ class PagesController < ApplicationController
   # DELETE /pages/1
   # DELETE /pages/1.json
   def destroy
-    @page = Page.find(params[:id])
+    @page = Page.find_by_slug(params[:id])
     @page.destroy
 
     respond_to do |format|

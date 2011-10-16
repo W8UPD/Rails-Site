@@ -24,13 +24,4 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
+gem 'cancan'

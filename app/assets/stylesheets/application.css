@@ -5,3 +5,12 @@
  *= require_self
  *= require_tree . 
 */
+
+pre {
+  background-color: #F3F3F3;
+  border: solid 1px #CCC;
+  padding: 5px 10px;
+  font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+  font-size: 0.9em;
+}
+
